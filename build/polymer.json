@@ -1,0 +1,49 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src\\group-additions-app\\group-additions-app.js",
+  "fragments": [],
+  "sources": [
+    "images/*",
+    "package.json",
+    ".npmrc",
+    "index.html",
+    "src/group-additions-app/group-additions-app.js"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "node_modules/@webcomponents/webcomponentsjs/**",
+    "node_modules/@webcomponents/webcomponentsjs/bundles/**.*",
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
+    "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+  ],
+  "builds": [
+    {
+      "name": "dist",
+      "js": {
+        "minify": true,
+        "compile": "es5",
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true,
+      "addServiceWorker": true,
+      "addPushManifest": false,
+      "preset": "es5-bundled",
+      "basePath": "MWG_Apps/GroupAdditions"
+    }
+  ],
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  },
+  "npm": true,
+  "componentDir": "node_modules/",
+  "moduleResolution": "node"
+}

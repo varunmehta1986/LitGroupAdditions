@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<base>
+<html>
+
+<head>
+    <base>
+    <title>Marketwrite Group Additions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+
+    <!--For code to work with visual studio build and on server -->
+    <script src="/MWG_Apps/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
+    <script type="module">
+        window.WebComponents = window.WebComponents || { waitFor(cb) { addEventListener('WebComponentsReady', cb) } };
+        WebComponents.waitFor(async () => { import('/MWG_Apps/GroupAdditions/src/group-additions-app/group-additions-app.js'); });
+    </script>
+    <!-- Ends here for code to work with visual studio build and on server -->
+
+
+    <!-- For code to work with Polymer serve -->
+    <!-- <script type="module" src="./src/group-additions-app/group-additions-app.js"></script> -->
+
+</head>
+
+<body>
+    <custom-style>
+        <style>
+      
+      html {
+        --lumo-primary-text-color: rgb(0, 153, 204);
+        --lumo-primary-color-50pct: rgba(0, 153, 204, 0.5);
+        --lumo-primary-color-10pct: rgba(0, 153, 204, 0.1);
+        --lumo-primary-color: #0099CC;
+      }
+      
+        </style>
+      </custom-style>
+      
+    <group-additions-app></group-additions-app>
+</body>
+
+</html>
